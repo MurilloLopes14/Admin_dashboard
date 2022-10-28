@@ -1,0 +1,59 @@
+@use "../1-BASE/_variables"
+
+table
+    width: 100%
+    border-collapse: collapse
+    margin-top: 10px
+
+    thead
+        pointer-events: none
+        td
+            font-weight: 600
+
+    tr
+        color: variables.$black-1
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+        &:hover
+            background-color: variables.$blue
+            color: variables.$white
+
+        &:last-child
+            border-bottom: none
+
+        td
+            padding: 10px
+
+            &:last-child
+                text-align: right
+
+            &:nth-child(2)
+                text-align: right
+
+            &:nth-child(3)
+                text-align: center
+
+    tbody
+        tr
+            td
+                .status
+                    padding: 2px 4px
+                    border-radius: 4px
+                    font-size: 14px
+                    font-weight: 500
+                    color: variables.$white
+
+                .delivered
+                    background-color: variables.$delivered
+
+                .return
+                    background-color: variables.$return
+
+                .inProgress
+                    background-color: variables.$inPgrogress
+
+                    @include tablet()
+                        white-space: nowrap
+
+                .pending
+                    background-color: variables.$pending

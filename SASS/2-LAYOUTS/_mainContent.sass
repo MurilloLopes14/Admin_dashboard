@@ -1,0 +1,52 @@
+@use "../1-BASE/_variables"
+@use "../1-BASE/_baseMixins"
+
+.main
+    display: flex
+    flex-direction: column
+    position: absolute
+    width: calc( 100% - 300px )
+    left: 300px
+    min-height: 100vh
+    background-color: variables.$white
+    transition: .5s
+
+    @include tablet()
+        width: 100%
+        left: 0
+
+    &.active
+        width: calc( 100% - 80px )
+        left: 80px
+
+        @include tablet()
+            left: 300px
+
+        @include mobile()
+            .toggle
+                position: fixed
+                right: 0
+                left: initial
+                color: variables.$white
+
+    .topbar
+        width: 100%
+        height: 60px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 10px
+
+        .toggle
+            position: relative
+            top: 0
+            width: 60px
+            height: 60px
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 2rem
+            cursor: pointer
+
+            @include mobile()
+                z-index: 10001

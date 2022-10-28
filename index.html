@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./ASSETS/favicon.png" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <!-- JS -->
+    <script src="./JS/app.js" defer></script>
+    <title>Admin dashboard</title>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <section class="container">
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon">
+                <i class="fa-brands fa-square-dribbble"></i
+              ></span>
+              <span class="title">LiloTech</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"> <i class="fa-solid fa-house"></i></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"> <i class="fa-solid fa-users"></i></span>
+              <span class="title">Clientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"> <i class="fa-solid fa-comment"></i></span>
+              <span class="title">Mensagens</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"> <i class="fa-solid fa-question"></i></span>
+              <span class="title">Ajuda</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"> <i class="fa-solid fa-gear"></i></span>
+              <span class="title">Configurações</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"> <i class="fa-solid fa-lock"></i></span>
+              <span class="title">Senha</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon">
+                <i class="fa-solid fa-right-from-bracket"></i
+              ></span>
+              <span class="title">Sair</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <!-- Main Content -->
+    <main class="main">
+      <!-- TopBar container -->
+      <section class="topbar">
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Pesquise por algo" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+        </div>
+        <div class="user">
+          <img src="./ASSETS/IMG/user.jfif" alt="User" />
+        </div>
+      </section>
+      <!-- InfoCards -->
+      <section class="cardBox">
+        <article>
+          <div class="cardBox_desc">
+            <span class="numbers">1,232</span>
+            <p class="cardName">Visualizações por dia</p>
+          </div>
+          <i class="fa-solid fa-eye"></i>
+        </article>
+        <article>
+          <div class="cardBox_desc">
+            <span class="numbers">80</span>
+            <p class="cardName">Vendas</p>
+          </div>
+          <i class="fa-solid fa-money-bill-trend-up"></i>
+        </article>
+        <article>
+          <div class="cardBox_desc">
+            <span class="numbers">543</span>
+            <p class="cardName">Comentários</p>
+          </div>
+          <i class="fa-solid fa-comments"></i>
+        </article>
+        <article>
+          <div class="cardBox_desc">
+            <span class="numbers">R$: 2.104.13</span>
+            <p class="cardName">Lucro</p>
+          </div>
+          <i class="fa-solid fa-chart-line"></i>
+        </article>
+      </section>
+      <!-- Data table list -->
+      <section class="details">
+        <div class="recentOrders">
+          <div class="headerCard">
+            <h2>Pedidos recentes</h2>
+            <a href="#" class="btn"> Ver todos</a>
+          </div>
+          <!-- Table -->
+          <table>
+            <thead>
+              <tr>
+                <td>Nome</td>
+                <td>Preço</td>
+                <td>Pagamento</td>
+                <td>Situação</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Star Refrigerator</td>
+                <td>R$:1.500,00</td>
+                <td>Pago</td>
+                <td><span class="status delivered">Entregue</span></td>
+              </tr>
+              <tr>
+                <td>Window Coolers</td>
+                <td>R$:2.200,00</td>
+                <td>Vancido</td>
+                <td><span class="status pending">Pendente</span></td>
+              </tr>
+              <tr>
+                <td>Speakers</td>
+                <td>R$:600,00</td>
+                <td>Pago</td>
+                <td><span class="status return">Retornando</span></td>
+              </tr>
+              <tr>
+                <td>Notebook HP</td>
+                <td>R$:2.000,00</td>
+                <td>Vencido</td>
+                <td><span class="status pending">Em processo</span></td>
+              </tr>
+              <tr>
+                <td>Apple watch</td>
+                <td>R$:3.200,00</td>
+                <td>Pago</td>
+                <td><span class="status delivered">Entregue</span></td>
+              </tr>
+              <tr>
+                <td>Wall Fan</td>
+                <td>R$:400,00</td>
+                <td>Pago</td>
+                <td><span class="status pending">Pendente</span></td>
+              </tr>
+              <tr>
+                <td>Adidas Shoes</td>
+                <td>R$:200,00</td>
+                <td>Pago</td>
+                <td><span class="status return">Retornando</span></td>
+              </tr>
+              <tr>
+                <td>Demin Shirts</td>
+                <td>R$:50,00</td>
+                <td>Vencido</td>
+                <td><span class="status inProgress">Em progresso</span></td>
+              </tr>
+              <tr>
+                <td>Casual shoes</td>
+                <td>R$:300,00</td>
+                <td>Pago</td>
+                <td><span class="status pending">Pendente</span></td>
+              </tr>
+              <tr>
+                <td>Wall Fan</td>
+                <td>R$:400,00</td>
+                <td>Pago</td>
+                <td><span class="status pending">Pendente</span></td>
+              </tr>
+              <tr>
+                <td>Demin Shirts</td>
+                <td>R$:50,00</td>
+                <td>Vencido</td>
+                <td><span class="status inProgress">Em progresso</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- New Costumers -->
+        <aside class="recentCostumers">
+          <div class="headerCard"><h2>Novos clientes</h2></div>
+          <table>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img1.jpg" alt="user" />
+                  <td>
+                    <h4>Hank<br /><span>França</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img2.jpg" alt="user" />
+                  <td>
+                    <h4>Fannie<br /><span>Brasil</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img3.jpg" alt="user" />
+                  <td>
+                    <h4>Imelda<br /><span>USA</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img4.jpg" alt="user" />
+                  <td>
+                    <h4>Billy<br /><span>Japão</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img5.jpg" alt="user" />
+                  <td>
+                    <h4>Christian<br /><span>Rússia</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img6.jpg" alt="user" />
+                  <td>
+                    <h4>Jayden<br /><span>Canadá</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img7.jpg" alt="user" />
+                  <td>
+                    <h4>Glennie<br /><span>Brasil</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img8.jpg" alt="user" />
+                  <td>
+                    <h4>Tommie<br /><span>Inglaterra</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx">
+                  <img src="./ASSETS/IMG/img9.jpg" alt="user" />
+                  <td>
+                    <h4>Kyla<br /><span>Holanda</span></h4>
+                  </td>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

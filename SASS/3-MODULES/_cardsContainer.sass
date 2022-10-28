@@ -1,0 +1,52 @@
+@use "../1-BASE/_variables"
+
+.cardBox
+
+    position: relative
+    width: 100%
+    padding: 20px
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    grid-gap: 30px
+
+    @include tablet()
+        grid-template-columns: repeat(2,1fr)
+
+    @include mobile()
+        grid-template-columns: repeat(1,1fr)
+
+    article
+        height: 100px
+        position: relative
+        background-color: variables.$white
+        padding: 30px
+        border-radius: 20px
+        display: flex
+        height: 150px
+        justify-content: space-between
+        cursor: pointer
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8)
+        transition: .3s
+
+        &:hover
+            background-color: variables.$blue
+            transform: scale(1.05)
+
+            .numbers, .cardName, i
+                color: variables.$white
+
+    &_desc
+        .numbers
+            position: relative
+            font-weight: 600
+            font-size: 2.5rem
+            color: variables.$blue
+
+        .cardName
+            color: variables.$black-2
+            font-size: 1.1rem
+            margin-top: 5px
+
+    i
+        font-size: 2.2rem
+        color: variables.$black-2

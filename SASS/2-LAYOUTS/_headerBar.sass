@@ -1,0 +1,104 @@
+@use "../1-BASE/_variables"
+@use "../1-BASE/_baseMixins"
+
+.container
+    position: relative
+    width: 100%
+
+    .navigation
+        position: fixed
+        width: 300px
+        height: 100%
+        background-color: variables.$blue
+        border-left: 10px solid variables.$blue
+        transition: .5s
+        overflow: hidden
+
+        @include tablet()
+            left: -300px
+
+        @include mobile()
+            width: 100%
+            left: -100%
+            z-index: 1000
+
+        &.active
+            width: 80px
+
+            @include tablet()
+                width: 300px
+                left: 0
+
+            @include mobile()
+                width: 100%
+                left: 0
+
+        ul
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+
+            li
+                position: relative
+                width: 100%
+                border-top-left-radius: 30px
+                border-bottom-left-radius: 30px
+
+                &:hover, &.hovered
+                    background-color: variables.$white
+
+                    a
+                        color: variables.$blue
+                        &::before
+                            content: ""
+                            position: absolute
+                            right: 0
+                            top: -50px
+                            width: 50px
+                            height: 50px
+                            border-radius: 50%
+                            box-shadow: 35px 35px 0 10px variables.$white
+                        &::after
+                            content: ""
+                            position: absolute
+                            right: 0
+                            bottom: -50px
+                            width: 50px
+                            height: 50px
+                            border-radius: 50%
+                            box-shadow: 35px -35px 0 10px variables.$white
+
+                &:nth-child(1)
+                    margin-bottom: 4rem
+                    pointer-events: none
+
+                a
+                    position: relative
+                    display: block
+                    width: 100%
+                    display: flex
+                    color: variables.$white
+
+                    &:hover
+                        color: variables.$blue
+
+                    .icon
+                        position: relative
+                        display: block
+                        min-width: 60px
+                        height: 60px
+                        line-height: 65px
+                        text-align: center
+
+                    i
+                        font-size: 1.5rem
+
+                    .title
+                        position: relative
+                        display: block
+                        padding: 0 10px
+                        height: 60px
+                        line-height: 60px
+                        text-align: start
+                        white-space: nowrap
